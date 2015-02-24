@@ -1,0 +1,15 @@
+@import url("stylesheet.css"); /* Import all styles from this file */
+
+/* add debug-information to some central elements
+-------------------------------------------------------- 
+
+*/
+body {background: beige;} 
+header#above {background: lightgreen;} 
+header#top {border:2px dashed aquamarine;}
+nav.navmenu {border:4px dotted brown;}
+
+div#content{background:grey;}
+article {background:pink;}
+figure {background:#ffffff}
+footer.byline {background: moccasin;}
