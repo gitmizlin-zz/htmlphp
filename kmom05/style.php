@@ -28,35 +28,7 @@ switch($p)
     include("$path/choose_stylesheet_process.php");
   }
   break;
-  
-  case "edit-stylesheet1":
-  {
-    $pageTitle   = "Editera Stylesheet (steg 1 av 4)";
-    $file        = "edit_stylesheet1.php";
-  }
-  break;
-  
-  case "edit-stylesheet2":
-  {
-    $pageTitle   = "Editera Stylesheet (steg 2 av 4)";
-    $file        = "edit_stylesheet2.php";
-  }
-  break;
-  
-  case "edit-stylesheet3":
-  {
-    $pageTitle   = "Editera Stylesheet (steg 3 av 4)";
-    $file        = "edit_stylesheet3.php";
-  }
-  break;
-  
-  case "edit-stylesheet4":
-  {
-    $pageTitle   = "Editera Stylesheet (steg 4 av 4)";
-    $file        = "edit_stylesheet4.php";
-  }
-  break;
-  
+   
   case "edit-stylesheet":
   {
     $pageTitle   = "Editera Stylesheet";
