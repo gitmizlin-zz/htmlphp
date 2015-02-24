@@ -55,6 +55,7 @@
 	 <a id="report-" href="report.php">Redovisning</a> |
    <a id="style-" href="style.php">Style</a> |
    <a id="test-"   href="test.php">Tester</a> |
+   <a id="source-" href="blokket.php">Blokket</a>
 	 <a id="source-" href="viewsource.php">Källkod</a>
 	</nav>
     </header>
