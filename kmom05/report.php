@@ -20,7 +20,18 @@
 				<h2>
 					Kmom05: HTML-formulär och PHP
 				</h2>
-				    <P>Kommer snart
+				    <P>I detta moment så fick man lära sig mycket mer om php, vilket var väldigt krävande. Jag skulle inte kunna koda så som de gör på exempelsidorna själv, men det känns häftigt när allt fungerar som det ska. Det är lärorikt att lära mig vad php kan göra och hur det ska göras.
+
+					<P>Det känns som att jag hade kunnat jobba mer med css:en och layouten, men det får duga i detta moment för att jag ville fokusera mig mer på php:n. Det blev därför inte heller med nytta av guiden php20.
+
+					<P>Mitt problem var att jag inte kunde hitta instuktioner på hur man ändrar rättigheterna. Det tog lite tid innan det löste sig tack vare forumet. Tycker att instruktionen kunnat vara tydligare för det verkar inte bara vara jag som haft problemet. 
+
+					<P>Instruktionerna var dock generellt bra, det gick snabbare än de föregående momenten och valideringen gick också fint. Style!-sidorna för formulär ser användbara ut, tycker också att Blueprint är bra att känna till.
+
+					<P>Artikeln "Unix, rättigheter på kataloger och filer" uppskattade  jag verkligen. Sådan information får man inte automatiskt när man inte är i IT-miljö.
+
+					<P>Tips till en ovan php-programmerare kan jag inte riktigt komma på eftersom jag själv är ovan php-användare. Vad jag försöker göra är att repetera. Det kan kännas mycket svårt och krångligt i början men allteftersom blir det bättre oberoende på om man gillar det eller inte.
+
 
 			</article> <!-- end of report_kmom05 article -->
 
