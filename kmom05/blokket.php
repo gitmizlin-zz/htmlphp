@@ -1,6 +1,7 @@
 <?php 
 include("incl/config.php");
 $pageId = "blokket";
+$title = "Blokketannons";
 
 // Check if the url contains a querystring with a page-part.
 $p = null;
@@ -70,10 +71,10 @@ switch($p)
 
 <?php include("incl/header.php"); ?>
 <div id="content">
-  <aside class="left" style="width:22%;">
+  <aside id="aside_box" class="left" style="width:32%;">
     <?php include("$path/aside.php"); ?>
   </aside>
-  <article class="right border justify-para" style="width:72%;">
+  <article id="blokket_article" class="right border justify-para" style="width:67%;">
     <p class="quiet small">Källkod till denna sida, <code><?php echo "$path/$file"; ?></code>, <a href="viewsource.php?dir=<?php echo $path; ?>&amp;file=<?php echo $file; ?>#file">hittar du här</a>.</p>
     <?php include("$path/$file"); ?>
     <?php include("incl/byline.php"); ?>  

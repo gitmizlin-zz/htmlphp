@@ -3,6 +3,7 @@
 
 */
 @import url(forms.css);
+@import url(table.css);
 
 /* general
 --------------------------------------------------------
@@ -93,6 +94,7 @@ body#me a#me-,
 body#report a#report-,
 body#style a#style-,
 body#test a#test-,
+body#blokket a#blokket-,
 body#source a#source- {
   border:2px 
   solid #FF1493;
@@ -149,7 +151,7 @@ div#footer a:active {
   line-height: 150%;
 }
 
-#testpage_article, #stylepage_article {
+#testpage_article, #stylepage_article, #blokket_article {
   display: inline-block;
 }
 
