@@ -19,7 +19,7 @@ $files = readDirectory($path);
   
   <?php foreach($files as $val): ?>
   
-  <tr>
+  <tr class="annons">
     <td><?php echo $val; ?></td>
     <td><?php echo getFileContents($path . $val); ?></td>
   </tr>

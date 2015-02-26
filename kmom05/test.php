@@ -3,7 +3,6 @@ include("incl/config.php");
 ?>
 <?php
 $pageId = "test";
-$title = "Multisida";
 
 // Check if the url contains a querystring with a page-part.
 $p = null;

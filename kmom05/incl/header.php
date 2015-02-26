@@ -6,7 +6,7 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <meta charset="utf-8">
-  <title><?php echo $title; ?></title>
+  <title><?php echo $pageTitle; ?></title>
   <link rel="shortcut icon" href="img/favicon.ico">
   
 <!-- links to external stylesheets -->

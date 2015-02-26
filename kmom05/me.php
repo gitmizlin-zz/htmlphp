@@ -1,7 +1,7 @@
 <?php
 	include("incl/config.php");
 
-	$title = "Om mig";
+	$pageTitle = "Min Me-sida om mig själv";
 	$pageId = "me";
 	$pageStyle = null;
 
@@ -14,7 +14,7 @@
 	<article class="justify border">
 		<h1>
 			<?php 
-				echo $title; 
+				echo $pageTitle; 
 			?>
 		</h1>	
 			<p>Hej! Mi heter jag och bor i södra Stockholm med min pojkvän och katt.</p>

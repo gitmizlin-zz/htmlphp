@@ -1,7 +1,7 @@
 <?php 
 	include("incl/config.php");
 
-	$title = "Mina redovisningar av kursmomenten";
+	$pageTitle = "Mina redovisningar av kursmomenten";
 	$pageId = "report";
 
 	include("incl/header.php"); 
@@ -13,7 +13,7 @@
 
 			<h1>
 				<?php 
-					echo $title; 
+					echo $pageTitle; 
 				?>
 			</h1>
 			<article id="report_kmom05">

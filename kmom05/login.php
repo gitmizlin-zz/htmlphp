@@ -1,8 +1,6 @@
 <?php 
 include("incl/config.php");
 $pageId = "login";
-$title = "login/logout";
-
 
 // Check if the url contains a querystring with a page-part.
 $p = null;
@@ -10,7 +8,6 @@ if(isset($_GET["p"]))
 {
   $p = $_GET["p"];
 }
-
 
 // Is the action a known action?
 $content = null;

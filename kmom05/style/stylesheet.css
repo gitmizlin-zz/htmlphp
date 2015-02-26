@@ -166,3 +166,11 @@ div#footer a:active {
 .related a:hover {
   color: #FF1493;
 }
+
+p.annons img {
+  max-width: 250px;
+} 
+
+tr.annons img {
+  max-width:250px;
+} 

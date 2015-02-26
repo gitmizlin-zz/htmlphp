@@ -2,7 +2,7 @@
 
 include("incl/config.php");
 
-$title = "Visa källkod";
+$pageTitle = "Visa källkod";
 $pageId = "source";
 
 $sourceBasedir=dirname(__FILE__);
@@ -17,7 +17,7 @@ include("incl/header.php");
 <!-- Sidans/Dokumentets huvudsakliga innehåll -->
 <div id="content">
 <h1>
-<?php echo $title; ?>
+<?php echo $pageTitle; ?>
 </h1>
 
 <?php echo "$sourceBody"; ?>
