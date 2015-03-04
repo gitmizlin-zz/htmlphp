@@ -16,11 +16,33 @@
 					echo $pageTitle; 
 				?>
 			</h1>
-			<article id="report_kmom05">
+			<article id="report_kmom06">
 				<h2>
 					Kmom06: PHP och SQLite
 				</h2>
-				    <P>Kommer snart
+				    <P>I början av momentet trodde jag att det skulle vara lättare än adnra momenten eftersom jag redan hade kört MySQL tidigare (men skulle kalla mig nybörjare). Att hantera SQlite kändes enklare än MySQL men PHP PDO var krånligt. 
+
+					<P>Det gick inte att koda själv i detta moment heller, så det blev en hel del kikande på lärarens kod. Jag kopierade alla filerna först, och sedan skrev jag om allt. På så sätt förstod jag mer om hur koden och filerna fungerade. Jag är fortfarande osäker med PHP, men det var en stor skillnad mellan att bara kopiera och att skriva om. 
+
+					<P>SQLite funkar bra, men det är synd att det inte funkar på Chrome eftersom jag inte använder några andra webbläsare än Chrome om det inte var för kursen.
+
+					<P>Första halvan av sqlite20 var helt okej. Men andra halvan tog flera timmar eftersom jag fick ett felmeddelande hela tiden vad jag än gjorde: 
+					Warning: PDO::prepare(): SQLSTATE[HY000]: General error: 26 file is encrypted or is not a database in xxx
+					Fatal error: Call to a member function execute() on a non-object in xxx 
+
+					<P>Det stod på forument att man behöger ta bort databasfilen men då visste jag inte var den låg. Jag förstod inte ens vad som var databasfilen (trodde att databas är någon sorts data-space i servern). När jag lärde mig att SQlite gäller att all data lagras i en fil på disk så blev det lugnt.
+
+					<P>Denna gång ändrade jag max-width för annonsbilder och la till max-hight så att alla bilderna syns i ungefär samma storlek.
+
+					<P>Har fortfarande svårt med att blanda PHP-koden och HTML-taggar, speciellt när det gäller if-satser i tabeller.
+
+					<P><b>Några saker jag behöver hjälp med:</b>
+
+					<P>När jag validerade webbsidan med Unicorn så behövde jag att ta bort sluttaggen "&lt;/article&gt;" för komo03 på redovisningssidan. Vad det berodde på vet jag inte än.
+
+					<P>Jag fattar fortfarande inte varför texterna i databasfilen för Blokket2 ser konstig ut och hur man kan fixa det. Jag har testat flera encodingsspråk på webbläsaren, men det hände inget.
+
+					<P>Det var också svårt att sätta en rätt relativ vägg till annonsbilderna. Först skrev jag "../../img/blokket/img_name", men det var fel. Sedan ändrade jag väggen till "img/blokket/img_name", vilket funkade. Trodde att väggen ska vara sättas från read_all.php-filen. Hur det funkar har jag inte lyckats med att ta reda på än.
 
 			</article> <!-- end of report_kmom06 article -->
 

@@ -95,6 +95,7 @@ body#report a#report-,
 body#style a#style-,
 body#test a#test-,
 body#blokket a#blokket-,
+body#blokket2 a#blokket2-,
 body#source a#source- {
   border:2px 
   solid #FF1493;
@@ -166,10 +167,11 @@ div#footer a:active {
   color: #FF1493;
 }
 
-p.annons img {
-  max-width: 250px;
+tr.annons img {
+  max-width:200px;
+  max-height: 200px;
 } 
 
-tr.annons img {
-  max-width:250px;
-} 
+td.annons_img {
+  text-align: center;
+}
