@@ -42,7 +42,7 @@
 
 					<P>Jag fattar fortfarande inte varför texterna i databasfilen för Blokket2 ser konstig ut och hur man kan fixa det. Jag har testat flera encodingsspråk på webbläsaren, men det hände inget.
 
-					<P>Det var också svårt att sätta en rätt relativ vägg till annonsbilderna. Först skrev jag "../../img/blokket/img_name", men det var fel. Sedan ändrade jag väggen till "img/blokket/img_name", vilket funkade. Trodde att väggen ska vara sättas från read_all.php-filen. Hur det funkar har jag inte lyckats med att ta reda på än.
+					<P>Det var också svårt att sätta en rätt relativ väg till annonsbilderna. Först skrev jag "../../img/blokket/img_name", men det var fel. Sedan ändrade jag vägen till "img/blokket/img_name", vilket funkade. Trodde att vägen ska vara sättas från read_all.php-filen. Hur det funkar har jag inte lyckats med att ta reda på än.
 
 			</article> <!-- end of report_kmom06 article -->
 
