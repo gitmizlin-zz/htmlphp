@@ -1,0 +1,17 @@
+/* general
+--------------------------------------------------------
+*/
+html {
+  overflow-y: scroll;
+}
+
+body {
+  width: 960px;
+  font-family: Tahoma, Geneva, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navmenu {
+  text-align: center;
+}
