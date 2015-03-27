@@ -8,8 +8,8 @@
 // Author: Mikael Roos, mos@bth.se
 //
 // Change history:
-//
-// 2011-02-04:
+// 
+// 2011-02-04: 
 // First try. Used as example code in htmlphp-kmom03.
 //
 
@@ -36,7 +36,7 @@ function getCurrentUrl() {
 function destroySession() {
   // Unset all of the session variables.
   $_SESSION = array();
-
+  
   // If it's desired to kill the session, also delete the session cookie.
   // Note: This will destroy the session, and not just the session data!
   if (ini_get("session.use_cookies")) {
@@ -46,7 +46,7 @@ function destroySession() {
           $params["secure"], $params["httponly"]
       );
   }
-
+  
   // Finally, destroy the session.
   session_destroy();
 }
@@ -56,15 +56,15 @@ function destroySession() {
 //
 // Function to open and read a directory, return its content as an array.
 //
-// $aPath: A path to the directory to scan for files.
-//
+// $aPath: A path to the directory to scan for files. 
+// 
 //  http://php.net/manual/en/function.is-dir.php
 //  http://php.net/manual/en/function.opendir.php
 //  http://php.net/manual/en/function.readdir.php
 //  http://php.net/manual/en/function.is-file.php
 //  http://php.net/manual/en/function.closedir.php
 //  http://php.net/manual/en/function.sort.php
-//
+//  
 function readDirectory($aPath) {
   $list = Array();
   if(is_dir($aPath)) {
@@ -86,11 +86,11 @@ function readDirectory($aPath) {
 //
 // Function to read a file and return its content.
 //
-// $aFilename: A filename with the whole path.
-//
+// $aFilename: A filename with the whole path. 
+// 
 //  http://php.net/manual/en/function.is-readable.php
 //  http://php.net/manual/en/function.file-get-contents.php
-//
+//  
 function getFileContents($aFilename) {
   if(is_readable($aFilename)) {
     return file_get_contents($aFilename);
@@ -104,12 +104,12 @@ function getFileContents($aFilename) {
 //
 // Function to save content to a file and return the status of the operation.
 //
-// $aFilename: A filename with the whole path.
-// $aContent: The content to save.
-//
+// $aFilename: A filename with the whole path. 
+// $aContent: The content to save. 
+// 
 //  http://php.net/manual/en/function.is-writable.php
 //  http://php.net/manual/en/function.file-put-contents.php
-//
+//  
 function putFileContents($aFilename, $aContent) {
   if(is_writable($aFilename)) {
     file_put_contents($aFilename, $aContent);
