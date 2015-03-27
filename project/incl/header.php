@@ -11,8 +11,10 @@
    <link rel="stylesheet" href="style/stylesheet.css" title="stylesheet">
 </head>
 
-<!-- Header med logga och navigareing -->
+<!-- The body id helps with highlighting current menu choice -->
+<body<?php if(isset($pageId)) echo " id='$pageId' "; ?>>
 
+<!-- Header med logga och navigareing -->
   <header id="top">
    <a href="index.php"><img src="img/top_img.png" alt="top image" id="top_img"></a>
 
@@ -20,12 +22,14 @@
    <div id="loginmenu"><?php echo userLoginMenu(); ?></div>
 
    <!-- Navigeringsmeny -->
-   <ul class="navmenu">
-    <li><a id="startsida-" href="index.php">hem</a></li>
+  <div id="nav">
+    <ul class="navmenu">
+    <li id="nav1"><a id="startsida-" href="index.php">hem</a></li>
     <li><a id="om_oss-" href="om_oss.php">om oss</a></li>
     <li><a id="artiklar-" href="artiklar.php">artiklar</a></li>
     <li><a id="objekt-" href="objekt.php">objekt</a></li>
    </ul>
+ </div>
   </header>
 
 

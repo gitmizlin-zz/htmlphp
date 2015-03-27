@@ -1,6 +1,5 @@
 <!-- Footer -->
 	<div id="footer">
-	<hr>
 		<footer id="bottom">
 			<p>Verktyg:
 				<a href="http://validator.w3.org/check/referer">HTML5</a>   |
