@@ -1,0 +1,182 @@
+/* import style for forms
+--------------------------------------------------------
+
+*/
+@import url(forms.css);
+@import url(table.css);
+
+/* general
+--------------------------------------------------------
+*/
+html {
+  overflow-y: scroll;
+  background: #DBEDFF;
+  background: -webkit-gradient(linear, left top, left bottom,     color-stop(0.0, #DBEDFF), color-stop(0.60, #ffffff), color-stop(1.00, #DBEDFF));
+  background: -moz-linear-gradient(top,  #DBEDFF 0%,  #FFFFFF 60%, #DBEDFF 100%);
+}
+
+body {
+  width: 840px;
+  background: #ffffff;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #333333;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+}
+
+h1
+{  text-transform: uppercase;
+  color: #FF1493;
+}
+
+#main_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* header
+--------------------------------------------------------
+*/
+#above {
+  padding-bottom: 20px;
+}
+
+div#content {
+  height: 100%;
+}
+
+/* navigation menu
+--------------------------------------------------------
+*/
+nav.navmenu {
+    display: block;
+    padding: 0.2em 1em 0 1em;
+    border-bottom: 2px solid #999999;
+    text-align: right;
+    padding-bottom: 5px;
+}
+
+nav.navmenu a {
+    padding: 0.3em 1em 0 1em;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-decoration:none;
+}
+nav.navmenu a:link {
+  color: #40E0D0;
+}
+
+nav.navmenu a:visited {
+  color: #A9A9A9;
+}
+
+nav.navmenu a:hover {
+  text-decoration:underline;
+  color: #FF1493;
+}
+
+nav.navmenu a:active {
+  color: #00CED1;
+}
+
+/* highlight current choice in navigation menu
+--------------------------------------------------------
+*/
+body#me a#me-,
+body#report a#report-,
+body#style a#style-,
+body#test a#test-,
+body#blokket a#blokket-,
+body#blokket2 a#blokket2-,
+body#source a#source- {
+  border:2px
+  solid #FF1493;
+}
+
+/* fiogure
+--------------------------------------------------------
+*/
+.presentation {
+  text-align: center;
+}
+
+/* footer
+--------------------------------------------------------
+*/
+#bottom {
+  text-align: right;
+  margin: 8px auto;
+  padding: 20px;
+  color: grey;
+}
+
+div#footer a {
+  font: italic 0.8em Arial, Helvetica, sans-serif;
+  text-decoration:none;
+  color: #999999;
+}
+
+div#footer a:link {
+  color: grey;
+}
+
+div#footer a:visited {
+  color: #A9A9A9;
+}
+
+div#footer a:hover {
+  text-decoration:underline;
+  color: #ff7400;
+}
+
+div#footer a:active {
+  color: #00CED1;
+}
+
+#byline {
+  text-align: center;
+}
+
+#aside_box {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 150%;
+}
+
+#testpage_article, #stylepage_article, #blokket_article {
+  display: inline-block;
+}
+
+.login {
+  text-align: right;
+}
+
+.login a:hover {
+  color: #FF1493;
+}
+
+.related a:hover {
+  color: #FF1493;
+}
+
+tr.objekt img {
+  max-width:200px;
+  max-height: 200px;
+}
+
+td.objekt_img {
+  text-align: center;
+}
+
+.left {
+  max-width:200px;
+  max-height: 200px;
+}
