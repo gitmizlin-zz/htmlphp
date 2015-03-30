@@ -70,9 +70,19 @@ else if ($p == "kmom03-create-password")
   $pageTitle   = "Tester kmom03: Kryptera lösenordet";
   $file        = "kmom03_create_password.php";
 }
+else if ($p == "read-all")
+{
+  $pageTitle   = "Alla artiklar om BOM";
+  $file        = "read_all.php";
+}
+else if ($p == "read")
+{
+  $pageTitle   = "Välj artikel";
+  $file        = "read.php";
+}
 else
 {
-  $pageTitle   = "artiklar";
+  $pageTitle   = "Artiklar";
   $file        = "default.php";
 }
 ?>

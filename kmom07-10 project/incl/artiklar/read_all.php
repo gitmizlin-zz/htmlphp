@@ -1,4 +1,8 @@
 <?php
+
+// Path to the SQLite database file
+$dbPath = dirname(__FILE__) . "/data/bmo.sqlite";
+
 //
 // Connect to the database
 //
@@ -8,26 +12,24 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 //
 // Read from database
 //
-$stmt = $db->prepare('SELECT * FROM Ads;');
+$stmt = $db->prepare('SELECT * FROM Article;');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
 ?>
 
-<h1>Visa alla annonser</h1>
+<h1>Alla artiklar</h1>
 
 <table>
-  <caption><em>Samtliga annonser i Blokket.</em></caption>
+  <caption><em>Samtliga artiklar i BMO</em></caption>
 
   <tr>
     <th>Titel:</th>
     <th>Bild:</th>
     <th>Beskrivning:</th>
   </tr>
-  
+
   <?php foreach($res as $ad): ?>
-  
+
   <tr class="annons">
     <td><?php echo $ad['title']; ?></td>
     <td class="annons_img"><img alt="annons_image" src="<?php echo $ad['image']; ?>"></td>
@@ -36,7 +38,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <td><?php echo $ad['description']; ?></td>
   </tr>
-  
+
   <?php endforeach; ?>
 
 </table>

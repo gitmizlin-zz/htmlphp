@@ -59,7 +59,7 @@ div#content {
 */
 nav.navmenu {
     display: block;
-    padding: 0.2em 1em 0 1em;
+/*    padding: 0.2em 1em 0 1em;*/
     border-bottom: 2px solid #999999;
     text-align: right;
     padding-bottom: 5px;
@@ -85,6 +85,11 @@ nav.navmenu a:hover {
 
 nav.navmenu a:active {
   color: #00CED1;
+}
+
+ul {
+  list-style:none;
+  padding-left:10px;
 }
 
 /* highlight current choice in navigation menu
@@ -151,7 +156,7 @@ div#footer a:active {
   line-height: 150%;
 }
 
-#testpage_article, #stylepage_article, #blokket_article {
+#testpage_article, #stylepage_article, #objekt_article {
   display: inline-block;
 }
 
@@ -177,6 +182,7 @@ td.objekt_img {
 }
 
 .left {
-  max-width:200px;
-  max-height: 200px;
+  max-width:400px;
+  max-height: 400px;
 }
+

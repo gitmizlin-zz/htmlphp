@@ -1,4 +1,7 @@
 <?php
+// Path to the SQLite database file
+$dbPath = dirname(__FILE__) . "/data/bmo.sqlite";
+
 //
 // Connect to the database
 //
@@ -7,15 +10,15 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 
 
 //
-// Create a select/option-list of the ads
-// 
-$stmt = $db->prepare('SELECT * FROM Ads;');
+// Create a select/option-list of the articles
+//
+$stmt = $db->prepare('SELECT * FROM Article;');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $current = null;
 
-$select = "<select id='input1' name='ads' onchange='form.submit();'>";
-$select .= "<option value='-1'>Välj Annons</option>";
+$select = "<select id='input1' name='article' onchange='form.submit();'>";
+$select .= "<option value='-1'>Välj artikel</option>";
 foreach($res as $ad) {
   $selected = "";
   if(isset($_POST['ads']) && $_POST['ads'] == $ad['id']) {
@@ -29,17 +32,17 @@ $select .= "</select>";
 
 ?>
 
-<h1>Visa annons</h1>
+<h1>Artiklar om BMO</h1>
 
-<p>Välj den annons som du vill visa.</p>
+<p>Följande artiklar ingår i vår samling.</p>
 
 <form method="post">
   <fieldset>
     <p>
-      <label for="input1">Annonser:</label><br>
+      <label for="input1">Bläddra bland atriklar nedan.</label><br>
       <?php echo $select; ?>
     </p>
-    
+
   <?php if(isset($current)): ?>
     <p>
       <div style="background:#eee; border:1px solid #999;padding:1em;">
@@ -49,6 +52,6 @@ $select .= "</select>";
       </div>
     </p>
   <?php endif; ?>
-    
+
   </fieldset>
 </form>

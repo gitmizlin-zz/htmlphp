@@ -7,22 +7,22 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 
 
 //
-// Create a select/option-list of the objects
+// Create a select/option-list of the categories
 //
-$stmt = $db->prepare('SELECT * FROM Object;');
+$stmt = $db->prepare('SELECT distinct category FROM Object;');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $current = null;
 
-$select = "<select id='input1' name='objekt' onchange='form.submit();'>";
+$select = "<select id='input1' name='kategori' onchange='form.submit();'>";
 $select .= "<option value='-1'>Välj kategori</option>";
-foreach($res as $obj) {
+foreach($res as $kat) {
   $selected = "";
-  if(isset($_POST['objekt']) && $_POST['objekt'] == $obj['id']) {
+  if(isset($_POST['kategori']) && $_POST['kategori'] == $kat['id']) {
     $selected = "selected";
-    $current = $obj;
+    $current = $kat;
   }
-  $select .= "<option value='{$obj['id']}' {$selected}>{$obj['title']} ({$obj['id']})</option>";
+  $select .= "<option value='{$kat['id']}' {$selected}>{$kat['title']} ({$kat['id']})</option>";
 }
 $select .= "</select>";
 

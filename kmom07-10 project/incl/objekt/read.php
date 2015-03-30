@@ -41,7 +41,7 @@ $select .= "</select>";
     </p>
 
   <?php if(isset($current)): ?>
-    <p>
+    <p class="text_center">
       <div style="background:#eee; border:1px solid #999;padding:1em;">
         <h2><?php echo $current['title']; ?></h2>
         <img src="<?php echo $current['image']; ?>" class="left">
