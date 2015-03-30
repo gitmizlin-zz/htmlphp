@@ -5,7 +5,6 @@
 $db = new PDO("sqlite:$dbPath");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
 
-
 //
 // Create a select/option-list of the categories
 //
@@ -16,16 +15,18 @@ $current = null;
 
 $select = "<select id='input1' name='kategori' onchange='form.submit();'>";
 $select .= "<option value='-1'>Välj kategori</option>";
-foreach($res as $kat) {
-  $selected = "";
-  if(isset($_POST['kategori']) && $_POST['kategori'] == $kat['id']) {
-    $selected = "selected";
-    $current = $kat;
-  }
-  $select .= "<option value='{$kat['id']}' {$selected}>{$kat['title']} ({$kat['id']})</option>";
-}
-$select .= "</select>";
 
+foreach($res as $category) {
+  $category = $category['category'];
+  $selected = "";
+  if(isset($_POST['kategori']) && $_POST['kategori'] == $category) {
+    $selected = "selected";
+    $current = $category;
+  }
+  $select .= "<option value='$category' {$selected}>$category</option>";
+}
+
+$select .= "</select>";
 
 ?>
 
