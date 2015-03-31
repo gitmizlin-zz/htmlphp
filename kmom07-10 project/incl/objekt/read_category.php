@@ -13,13 +13,13 @@ $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $current = null;
 
-$select = "<select id='input1' name='kategori' onchange='form.submit();'>";
+$select = "<select id='input1' name='select_category' onchange='form.submit();'>";
 $select .= "<option value='-1'>Välj kategori</option>";
 
 foreach($res as $category) {
   $category = $category['category'];
   $selected = "";
-  if(isset($_POST['kategori']) && $_POST['kategori'] == $category) {
+  if(isset($_POST['select_category']) && $_POST['select_category'] == $category) {
     $selected = "selected";
     $current = $category;
   }
@@ -32,24 +32,28 @@ $select .= "</select>";
 
 <h1>Museiobjekt</h1>
 
-<p>Följande objekt ingår i vår samling:</p>
+<table>
+  <caption><em>Objekt efter kategori</em></caption>
 
-<form method="post">
-  <fieldset>
-    <p>
-      <label for="input1">Objekt efter kategori:</label><br>
-      <?php echo $select; ?>
-    </p>
+  <tr>
+    <th>Kategori:</th>
+    <th>Bild:</th>
+    <th>Beskrivning:</th>
+  </tr>
 
-  <?php if(isset($current)): ?>
-    <p>
-      <div style="background:#eee; border:1px solid #999;padding:1em;">
-        <h2><?php echo $current['title']; ?></h2>
-        <img src="<?php echo $current['image']; ?>" class="left">
-        <p><?php echo $current['text']; ?></p>
-      </div>
-    </p>
-  <?php endif; ?>
+  <?php foreach($res as $obj): ?>
 
-  </fieldset>
-</form>
+  <tr class="objekt">
+    <td><?php echo $obj['category']; ?></td>
+    <td class="objekt_img"><img alt="objekt_image" src="<?php echo $obj['image']; ?>"></td>
+
+<!--     <?php print_r($obj['image']); ?> output the content of the variable-->
+
+    <td><?php echo $obj['text']; ?></td>
+  </tr>
+
+  <?php endforeach; ?>
+
+</table>
+
+

@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  width: 840px;
+  width: 960px;
   background: #ffffff;
   font-family: Tahoma, Geneva, sans-serif;
   color: #333333;
@@ -184,5 +184,9 @@ td.objekt_img {
 .left {
   max-width:400px;
   max-height: 400px;
+}
+
+#article {
+  background-color: yellow;
 }
 

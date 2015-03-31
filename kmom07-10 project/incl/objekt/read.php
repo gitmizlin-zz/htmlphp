@@ -22,7 +22,7 @@ foreach($res as $obj) {
     $selected = "selected";
     $current = $obj;
   }
-  $select .= "<option value='{$obj['id']}' {$selected}>{$obj['title']} ({$obj['id']})</option>";
+  $select .= "<option value='{$obj['id']}' {$selected}>{$obj['title']}</option>";
 }
 $select .= "</select>";
 
@@ -36,7 +36,7 @@ $select .= "</select>";
 <form method="post">
   <fieldset>
     <p>
-      <label for="input1">Objekt:</label><br>
+      <label for="input1">Bläddra bland atriklar nedan.</label><br>
       <?php echo $select; ?>
     </p>
 

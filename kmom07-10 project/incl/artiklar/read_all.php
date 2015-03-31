@@ -12,33 +12,19 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 //
 // Read from database
 //
-$stmt = $db->prepare('SELECT * FROM Article;');
+$stmt = $db->prepare('SELECT * FROM Article WHERE category = "article";');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <h1>Alla artiklar</h1>
 
-<table>
-  <caption><em>Samtliga artiklar i BMO</em></caption>
+  <?php foreach($res as $art): ?>
 
-  <tr>
-    <th>Titel:</th>
-    <th>Bild:</th>
-    <th>Beskrivning:</th>
-  </tr>
-
-  <?php foreach($res as $ad): ?>
-
-  <tr class="annons">
-    <td><?php echo $ad['title']; ?></td>
-    <td class="annons_img"><img alt="annons_image" src="<?php echo $ad['image']; ?>"></td>
-
-<!--     <?php print_r($ad['image']); ?> output the content of the variable-->
-
-    <td><?php echo $ad['description']; ?></td>
-  </tr>
+  <article id="article">
+    <h2><?php echo $art['title']; ?></h2>
+    <p><?php echo $art['author']; ?>, publicerad <?php echo $art['pubdate']; ?></p>
+    <p><?php echo $art['content']; ?></p>
+  </article>
 
   <?php endforeach; ?>
-
-</table>
