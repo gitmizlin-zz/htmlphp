@@ -20,21 +20,17 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <table>
   <caption><em>Samtliga objekt i BMO</em></caption>
 
-  <tr>
-    <th>Kategori:</th>
-    <th>Bild:</th>
-    <th>Beskrivning:</th>
-  </tr>
-
   <?php foreach($res as $obj): ?>
 
   <tr class="objekt">
-    <td><?php echo $obj['category']; ?></td>
+    <td><?php echo $obj['text']; ?></td>
     <td class="objekt_img"><img alt="objekt_image" src="<?php echo $obj['image']; ?>"></td>
-
 <!--     <?php print_r($obj['image']); ?> output the content of the variable-->
 
     <td><?php echo $obj['text']; ?></td>
+    <td><?php echo "Kategori: " . $obj['category']; ?></td>
+    <td><?php echo "Ägare: " . $obj['owner']; ?></td>
+
   </tr>
 
   <?php endforeach; ?>

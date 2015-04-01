@@ -74,7 +74,6 @@ switch($p)
   }
 }
 
-
 ?>
 
 <?php include("incl/header.php"); ?>

@@ -36,7 +36,7 @@ $select .= "</select>";
 <form method="post">
   <fieldset>
     <p>
-      <label for="input1">Bläddra bland atriklar nedan.</label><br>
+      <label for="input1">Bläddra bland objekt nedan.</label><br>
       <?php echo $select; ?>
     </p>
 
@@ -46,6 +46,8 @@ $select .= "</select>";
         <h2><?php echo $current['title']; ?></h2>
         <img src="<?php echo $current['image']; ?>" class="left">
         <p><?php echo $current['text']; ?></p>
+        <p><?php echo "Kategori: " . $current['category']; ?></p>
+        <p><?php echo "Ägare: " . $current['owner']; ?></p>
       </div>
     </p>
   <?php endif; ?>

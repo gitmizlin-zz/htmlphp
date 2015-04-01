@@ -17,7 +17,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $current = null;
 
 $select = "<select id='input1' name='select_article' onchange='form.submit();'>";
-$select .= "<option value='-1'>Välj objekt</option>";
+$select .= "<option value='-1'>Välj artikel</option>";
 foreach($res as $art) {
   $selected = "";
   if(isset($_POST['select_article']) && $_POST['select_article'] == $art['id']) {
@@ -43,6 +43,7 @@ $select .= "</select>";
     <p class="text_center">
       <div style="background:#eee; border:1px solid #999;padding:1em;">
         <h2><?php echo $current['title']; ?></h2>
+        <p><?php echo $current['author'] . ", ".  $current['title'] . "</p><p>publicerad " . $current['pubdate']; ?></p>
         <p><?php echo $current['content']; ?></p>
       </div>
     </p>
