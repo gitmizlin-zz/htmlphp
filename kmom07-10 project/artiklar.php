@@ -65,10 +65,10 @@ else if ($p == "kmom03-sessioninfo")
   $pageTitle   = "Tester kmom03: Information om sessionen";
   $file        = "kmom03_sessioninfo.php";
 }
-else if ($p == "kmom03-create-password")
+else if ($p == "article-delete")
 {
-  $pageTitle   = "Tester kmom03: Kryptera lösenordet";
-  $file        = "kmom03_create_password.php";
+  $pageTitle   = "Redera artikel";
+  $file        = "delete.php";
 }
 else if ($p == "read-all")
 {
@@ -86,6 +86,8 @@ else
   $file        = "default.php";
 }
 ?>
+
+<button type="button">Visa alla artiklar</button>
 
 <?php include("incl/header.php"); ?>
 <div id="content">

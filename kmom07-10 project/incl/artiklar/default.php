@@ -1,5 +1,14 @@
 <!-- Sidans/Dokumentets huvudsakliga innehåll -->
-<h1>Artiklar</h1>
+<h1>BOM Artiklar</h1>
 
-<p>bla bla bla
+<?php if (!isset($_POST['all-articles'])): ?>
+<form method="post">
+    <input type="submit" class="button" name="all-articles" value="Visa alla artiklar" />
+</form>
+<?php endif; ?>
 
+<?php
+    if (isset($_POST['all-articles'])) {
+    	include("read_all.php");
+    }
+?>

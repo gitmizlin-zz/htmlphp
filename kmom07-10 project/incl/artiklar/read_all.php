@@ -17,8 +17,6 @@ $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<h1>Alla artiklar</h1>
-
   <?php foreach($res as $art): ?>
 
   <article id="article">
