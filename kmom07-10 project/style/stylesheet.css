@@ -27,7 +27,7 @@ body {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-
+  height: 100%;
 }
 
 h1
@@ -51,7 +51,7 @@ h1
 }
 
 div#content {
-  height: 100%;
+/*  overflow: hidden;*/
 }
 
 /* navigation menu
@@ -70,6 +70,11 @@ nav.navmenu a {
     font-family: Tahoma, Geneva, sans-serif;
     text-decoration:none;
 }
+
+nav.navmenu a.active {
+  border: 2px solid #FF1493;
+}
+
 nav.navmenu a:link {
   color: #40E0D0;
 }
@@ -95,22 +100,12 @@ ul {
 /* highlight current choice in navigation menu
 --------------------------------------------------------
 */
-body#me a#me-,
-body#report a#report-,
-body#style a#style-,
-body#test a#test-,
-body#blokket a#blokket-,
-body#blokket2 a#blokket2-,
-body#source a#source- {
+body#hem a#hem-,
+body#objekt a#objekt-,
+body#artiklar a#artiklar-,
+body#om a#om-, {
   border:2px
   solid #FF1493;
-}
-
-/* fiogure
---------------------------------------------------------
-*/
-.presentation {
-  text-align: center;
 }
 
 /* footer
@@ -118,9 +113,12 @@ body#source a#source- {
 */
 #bottom {
   text-align: right;
-  margin: 8px auto;
   padding: 20px;
   color: grey;
+  height: auto;
+  margin-left: 20px;
+  height: 150px;
+  margin-bottom: 30px;
 }
 
 div#footer a {
@@ -190,3 +188,10 @@ td.objekt_img {
   background-color: yellow;
 }
 
+.fotter_column {
+  display: inline-block;
+  text-align: left;
+  float: left;
+  width: 30%;
+  margin-right: 30px;
+}

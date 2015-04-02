@@ -2,7 +2,7 @@
 	include("incl/config.php");
 
 	$pageTitle = "Om Begravningsmuseum Online";
-	$pageId = "om oss";
+	$pageId = "om";
 
 	include("incl/header.php");
 ?>
@@ -26,7 +26,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 $stmt = $db->prepare('SELECT * FROM Article WHERE category="about";');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-print_r($res)
+// print_r($res)
 ?>
 
 		<div id="presentation">
@@ -36,14 +36,12 @@ print_r($res)
 					echo $pageTitle;
 				?>
 			</h1>
+			<?php foreach($res as $about): ?>
 			<article id="om_oss">
-				<?php foreach($res as $about): ?>
-
-	            <?php echo $about['title']; ?>
+	            <h2><?php echo $about['title']; ?></h2>
 	            <?php echo $about['content']; ?>
-
-                <?php endforeach; ?>
-            </article>
+	        </article>
+            <?php endforeach; ?>
 
 		</div> <!-- end of presentaion div -->
 
