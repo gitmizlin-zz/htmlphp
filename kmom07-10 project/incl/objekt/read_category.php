@@ -25,10 +25,6 @@ foreach($res as $category) {
 $select .= "</select>";
 ?>
 
-<h1>Museiobjekt</h1>
-
-<p>Följande objekt ingår i vår samling:</p>
-
 <form method="post">
   <fieldset>
     <p>
@@ -45,24 +41,21 @@ if(isset($current)):
   $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<table>
-    <caption><em>caption</em></caption>
-    <tr>
-      <th>Titel:</th>
-      <th>Bild:</th>
-      <th>Beskrivning:</th>
-    </tr>
 
-    <?php foreach($res as $current): ?>
-    <tr class="objekt">
-      <td><?php echo $current['title']; ?></td>
-      <td class="objekt_img"><img alt="objekt_image" src="<?php echo $current['image']; ?>"></td>
-      <td><?php echo $current['text']; ?></td>
-    </tr>
 
+<?php foreach($res as $current): ?>
+<div class="article_wrapper_1">
+  <article class="object">
+      <p class="object_title"><?php echo $current['title']; ?></p>
+      <p class="small"><?php echo "Kategori: " . $current['category']; ?></p>
+      <p class="object_img"><img alt="object_image" src="<?php echo $current['image']; ?>"></p>
+      <p class="small"><?php echo $current['text']; ?></p>
+      <p class="small"><?php echo "Ägare: " . $current['owner']; ?></p>
+  </article>
+</div>
   <?php endforeach; ?>
   <?php endif; ?>
-</table>
+
 </form>
 
 

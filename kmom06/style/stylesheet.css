@@ -1,5 +1,5 @@
 /* import style for forms
--------------------------------------------------------- 
+--------------------------------------------------------
 
 */
 @import url(forms.css);
@@ -11,14 +11,14 @@
 html {
   overflow-y: scroll;
   background: #DBEDFF;
-  background: -webkit-gradient(linear, left top, left bottom,     color-stop(0.0, #DBEDFF), color-stop(0.60, #ffffff), color-stop(1.00, #DBEDFF)); 
+  background: -webkit-gradient(linear, left top, left bottom,     color-stop(0.0, #DBEDFF), color-stop(0.60, #ffffff), color-stop(1.00, #DBEDFF));
   background: -moz-linear-gradient(top,  #DBEDFF 0%,  #FFFFFF 60%, #DBEDFF 100%);
-} 
+}
 
-body { 
+body {
   width: 840px;
   background: #ffffff;
-  font-family: Tahoma, Geneva, sans-serif; 
+  font-family: Tahoma, Geneva, sans-serif;
   color: #333333;
   padding-right: 20px;
   padding-left: 20px;
@@ -27,11 +27,10 @@ body {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+}
 
-} 
-
-h1 
-{  text-transform: uppercase;
+h1 {
+  text-transform: uppercase;
   color: #FF1493;
 }
 
@@ -44,7 +43,7 @@ h1
 }
 
 /* header
--------------------------------------------------------- 
+--------------------------------------------------------
 */
 #above {
   padding-bottom: 20px;
@@ -55,7 +54,7 @@ div#content {
 }
 
 /* navigation menu
--------------------------------------------------------- 
+--------------------------------------------------------
 */
 nav.navmenu {
     display: block;
@@ -79,8 +78,8 @@ nav.navmenu a:visited {
 }
 
 nav.navmenu a:hover {
-  text-decoration:underline;  
-  color: #FF1493; 
+  text-decoration:underline;
+  color: #FF1493;
 }
 
 nav.navmenu a:active {
@@ -97,19 +96,19 @@ body#test a#test-,
 body#blokket a#blokket-,
 body#blokket2 a#blokket2-,
 body#source a#source- {
-  border:2px 
+  border:2px
   solid #FF1493;
 }
 
 /* fiogure
--------------------------------------------------------- 
+--------------------------------------------------------
 */
 .presentation {
   text-align: center;
 }
 
 /* footer
--------------------------------------------------------- 
+--------------------------------------------------------
 */
 #bottom {
   text-align: right;
@@ -129,16 +128,16 @@ div#footer a:link {
 }
 
 div#footer a:visited {
-  color: #A9A9A9; 
+  color: #A9A9A9;
 }
 
 div#footer a:hover {
   text-decoration:underline;
-  color: #ff7400; 
+  color: #ff7400;
 }
 
 div#footer a:active {
-  color: #00CED1; 
+  color: #00CED1;
 }
 
 #byline {
@@ -170,7 +169,7 @@ div#footer a:active {
 tr.annons img {
   max-width:200px;
   max-height: 200px;
-} 
+}
 
 td.annons_img {
   text-align: center;

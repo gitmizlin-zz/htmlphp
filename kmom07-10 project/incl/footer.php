@@ -1,18 +1,21 @@
 <!-- Footer -->
 	<div id="footer">
-	<hr>
 	    <div>
 			<footer id="bottom">
 				<div class="fotter_column">
 			        <p><b>Besöksadress:</b> Skogskyrkogården, Donationsgatan 2, 341 35 Ljungby</p>
 			        <p><b>Kontakt via pastorsexpeditionen:</b> Skogskyrkogården, Donationsgatan 2, 341 35 Ljungby</p>
-			        <?php if (isset($pageId) && $pageId!="om") {echo "<p><a href='om.php'>>>Läs mer om oss<a/></p>";} ?>
+			        <p><a href="https://goo.gl/maps/YUjRE" target="_blank">Se karta</a></p>
+
+			        <?php if (isset($pageId) && $pageId!="om") {
+			        	echo '<p><a href="om.php">>>Läs mer om oss</a></p>';
+			        } ?>
 			    </div>
 
 			    <div class="fotter_column">
-			        <p><b>Telefon:</b> 0372-671 10</p>
-			        <p><b>E-mail:</b> ljungby@svenskakyrkan.se</p>
-			        <p><b>Facebook:</b> <a href="https://www.facebook.com/Begravningsmuseet">BMO</a></p>
+			        <p><b>Telefon: </b> 0372-671 10</p>
+			        <p><b>E-mail: </b><a href="mailto:ljungby@svenskakyrkan.se">ljungby@svenskakyrkan.se</a></p>
+			        <p><b>Facebook: </b><a href="https://www.facebook.com/Begravningsmuseet">BMO</a></p>
 			    </div>
 
 				<div class="fotter_column">
@@ -27,5 +30,7 @@
 			</footer>
 		</div>
 	</div> <!-- end of footer div -->
+</div>   <!-- end of footer whole -->
+
 </body>
 </html>

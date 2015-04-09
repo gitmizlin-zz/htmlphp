@@ -8,31 +8,35 @@
 /* general
 --------------------------------------------------------
 */
-html {
+html {login
   overflow-y: scroll;
   background: #DBEDFF;
-  background: -webkit-gradient(linear, left top, left bottom,     color-stop(0.0, #DBEDFF), color-stop(0.60, #ffffff), color-stop(1.00, #DBEDFF));
-  background: -moz-linear-gradient(top,  #DBEDFF 0%,  #FFFFFF 60%, #DBEDFF 100%);
 }
 
 body {
-  width: 960px;
   background: #ffffff;
   font-family: Tahoma, Geneva, sans-serif;
   color: #333333;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  margin: 0px;
   height: 100%;
 }
 
-h1
-{  text-transform: uppercase;
-  color: #FF1493;
+div#whole {
+  width: 960px;
+  margin:0 auto;
+  padding-top: 5px;
+}
+
+div#content {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #686868;
+}
+
+.top_img {
+    background-image: url(start_img.jpg);
 }
 
 #main_img {
@@ -47,49 +51,50 @@ h1
 --------------------------------------------------------
 */
 #above {
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
-div#content {
-/*  overflow: hidden;*/
+#logotitle {
+  color: #999966;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#logotitle a, a:hover, a:visited {
+  text-decoration: none;
+  color: #999966;
+}
+
+#top_img {
+  background-image: url("img/start_img.jpg");
 }
 
 /* navigation menu
 --------------------------------------------------------
 */
 nav.navmenu {
-    display: block;
-/*    padding: 0.2em 1em 0 1em;*/
-    border-bottom: 2px solid #999999;
+    border-bottom: 2px solid #999966;
     text-align: right;
-    padding-bottom: 5px;
 }
 
 nav.navmenu a {
     padding: 0.3em 1em 0 1em;
     font-family: Tahoma, Geneva, sans-serif;
     text-decoration:none;
+    display: inline-block;
 }
 
 nav.navmenu a.active {
-  border: 2px solid #FF1493;
-}
-
-nav.navmenu a:link {
-  color: #40E0D0;
-}
-
-nav.navmenu a:visited {
-  color: #A9A9A9;
+  background-color: #999966;
+  color: white;
 }
 
 nav.navmenu a:hover {
-  text-decoration:underline;
-  color: #FF1493;
-}
-
-nav.navmenu a:active {
-  color: #00CED1;
+  color: white;
+  -webkit-transition: color 1.5s ease;
+  -moz-transition: color 1.5s ease;
+  background-color: #999966;
+  transition: background-color 1.5s;
 }
 
 ul {
@@ -97,16 +102,6 @@ ul {
   padding-left:10px;
 }
 
-/* highlight current choice in navigation menu
---------------------------------------------------------
-*/
-body#hem a#hem-,
-body#objekt a#objekt-,
-body#artiklar a#artiklar-,
-body#om a#om-, {
-  border:2px
-  solid #FF1493;
-}
 
 /* footer
 --------------------------------------------------------
@@ -116,9 +111,9 @@ body#om a#om-, {
   padding: 20px;
   color: grey;
   height: auto;
-  margin-left: 20px;
   height: 150px;
   margin-bottom: 30px;
+  border-top: 2px solid #999966;
 }
 
 div#footer a {
@@ -137,7 +132,7 @@ div#footer a:visited {
 
 div#footer a:hover {
   text-decoration:underline;
-  color: #ff7400;
+  color: #999966;
 }
 
 div#footer a:active {
@@ -158,34 +153,51 @@ div#footer a:active {
   display: inline-block;
 }
 
-.login {
-  text-align: right;
-}
-
-.login a:hover {
-  color: #FF1493;
-}
-
 .related a:hover {
   color: #FF1493;
 }
 
-tr.objekt img {
-  max-width:200px;
-  max-height: 200px;
+div.article_wrapper_1 {
+  height: 600px;
+  display: inline-block;
+  float: left;
+  width: 44%;
+  background-color: #F6F6F3;
+  margin-bottom: 20px;
+  margin-right: 20px;
+/*  border: solid 1px #949470;*/
+  color: #686868;
+  padding: 10px;
 }
 
-td.objekt_img {
+div.article_wrapper_2 {
+  background-color: #F6F6F3;
+/*  border: solid 1px #949470;*/
+  color: #686868;
+  padding: 20px;
+}
+
+.object img {
+  max-width: 90%;
+  max-height: 380px;
+}
+
+.object_img {
   text-align: center;
+  padding: 10px;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.object_title {
+  font-weight: bold;
 }
 
 .left {
   max-width:400px;
   max-height: 400px;
-}
-
-#article {
-  background-color: yellow;
 }
 
 .fotter_column {
@@ -194,4 +206,12 @@ td.objekt_img {
   float: left;
   width: 30%;
   margin-right: 30px;
+}
+
+.fotter_column a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
 }

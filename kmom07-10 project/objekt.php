@@ -81,7 +81,9 @@ switch($p)
   <aside id="aside_box" class="left" style="width:20%;">
     <?php include("$path/aside.php"); ?>
   </aside>
-  <article id="objekt_article" class="right border justify-para" style="width:79%;">
+  <article id="objekt_article" style="width:79%;">
+
+  <h1>Museiobjekt</h1>
 
     <?php include("$path/$file"); ?>
   </article>

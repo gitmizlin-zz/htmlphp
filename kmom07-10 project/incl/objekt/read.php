@@ -29,10 +29,6 @@ $select .= "</select>";
 
 ?>
 
-<h1>Museiobjekt</h1>
-
-<p>Följande objekt ingår i vår samling:</p>
-
 <form method="post">
   <fieldset>
     <p>
@@ -42,9 +38,9 @@ $select .= "</select>";
 
   <?php if(isset($current)): ?>
     <p class="text_center">
-      <div style="background:#eee; border:1px solid #999;padding:1em;">
+      <div class="article_wrapper_2">
         <h2><?php echo $current['title']; ?></h2>
-        <img src="<?php echo $current['image']; ?>" class="left">
+        <p class="object_img"><img src="<?php echo $current['image']; ?>" class="left"></p>
         <p><?php echo $current['text']; ?></p>
         <p><?php echo "Kategori: " . $current['category']; ?></p>
         <p><?php echo "Ägare: " . $current['owner']; ?></p>

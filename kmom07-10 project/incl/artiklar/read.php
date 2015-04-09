@@ -40,15 +40,12 @@ $select .= "</select>";
     </p>
 
   <?php if(isset($current)): ?>
-    <p class="text_center">
-      <div style="background:#eee; border:1px solid #999;padding:1em;">
+      <div class="article_wrapper_2">
         <h2><?php echo $current['title']; ?></h2>
-        <p><?php echo $current['author'] . ", ".  $current['title'] . "</p><p>publicerad " . $current['pubdate']; ?></p>
+        <p><?php echo $current['author'] . ", ".  $current['title'] . "</p><p class='small'>publicerad " . $current['pubdate']; ?></p>
         <p><?php echo $current['content']; ?></p>
       </div>
-    </p>
   <?php endif; ?>
-
   </fieldset>
 </form>
 

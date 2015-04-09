@@ -13,9 +13,11 @@
 <div id="content">
 	<article class="content column c-7">
 
-	<h1><?php echo $pageTitle; ?></h1>
+	<div class="top_img">
 
-	  <img src="img/start.jpg" alt="Begravningsfölje" width="100%">
+		<h1><?php echo $pageTitle; ?></h1>
+	    <p>BMO finns för att vårda ett kulturarv av seder och bruk kring begravningar.</p>
+	</div>
 <!-- atribute https://www.flickr.com/photos/brighton/13443534663/ -->
 
 	  <p>

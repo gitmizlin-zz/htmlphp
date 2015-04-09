@@ -17,12 +17,14 @@ $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-  <?php foreach($res as $art): ?>
+<?php foreach($res as $art): ?>
+    <br>
+    <div class="article_wrapper_2">
+	  	<article id="article">
+		    <h2><?php echo $art['title']; ?></h2>
+			    <p><?php echo $art['author']; ?>, publicerad <?php echo $art['pubdate']; ?></p>
+			    <p><?php echo $art['content']; ?></p>
+	    </article>
+    </div>
 
-  <article id="article">
-    <h2><?php echo $art['title']; ?></h2>
-    <p><?php echo $art['author']; ?>, publicerad <?php echo $art['pubdate']; ?></p>
-    <p><?php echo $art['content']; ?></p>
-  </article>
-
-  <?php endforeach; ?>
+<?php endforeach; ?>

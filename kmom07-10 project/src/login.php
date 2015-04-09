@@ -10,8 +10,8 @@
 // Author: Mikael Roos, mos@bth.se
 //
 // Change history:
-// 
-// 2011-01-26: 
+//
+// 2011-01-26:
 // First try. Used as example code in htmlphp-kmom03.
 //
 
@@ -36,9 +36,9 @@ function userIsAuthenticated() {
 function userLoginMenu() {
   // array with all menu items
   $menu = array(
-    "login"   => "login.php?p=login",
-    "status"   => "login.php",
-    "logout"   => "login.php?p=logout",  
+    "Login"   => "login.php?p=login",
+    "Status"   => "login.php",
+    "Logout"   => "login.php?p=logout",
   );
 
   // check if user is logged in or not, alter the menu depending on the result
@@ -46,17 +46,15 @@ function userLoginMenu() {
     unset($menu['login']);
   } else {
     unset($menu['status']);
-    unset($menu['logout']);      
+    unset($menu['logout']);
   }
-  
-  $html = "<nav class='login'>";
+
+  $html = "<a class='navmenu'";
   foreach($menu as $key=>$val) {
     $html .= "<a href='$val'>$key</a> ";
   }
-  $html .= "</nav>";
   return $html;
 }
-
 
 // -------------------------------------------------------------------------------------------
 //
@@ -112,18 +110,18 @@ function userLogin() {
   $output=null;
   $outputClass=null;
   if(isset($_POST['doLogin'])) {
-  
+
     // does account and password match?
     if($userAccount == $_POST['account'] && $userPassword == userPassword($_POST['password'])) {
       $output = "Du är nu inloggad. Menyn uppe i högra hörnet har ändrat sig.";
       $outputClass = "success";
-      $_SESSION['authenticated'] = true; 
+      $_SESSION['authenticated'] = true;
     } else {
       $output = "Du lyckades ej logga in. Felaktigt konto eller lösenord.";
       $outputClass = "error";
     }
   }
-  
+
   return userLoginForm($output, $outputClass);
 }
 

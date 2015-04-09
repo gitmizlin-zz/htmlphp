@@ -12,27 +12,20 @@ $stmt = $db->prepare('SELECT * FROM Object;');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
 ?>
 
-<h1>Museiobjekt</h1>
-
-<table>
-  <caption><em>Samtliga objekt i BMO</em></caption>
-
   <?php foreach($res as $obj): ?>
-
-  <tr class="objekt">
-    <td><?php echo $obj['text']; ?></td>
-    <td class="objekt_img"><img alt="objekt_image" src="<?php echo $obj['image']; ?>"></td>
+<div class="article_wrapper_1">
+  <article class="object">
+    <p class="object_title"><?php echo $obj['title']; ?></p>
+    <p class="small"><?php echo "Kategori: " . $obj['category']; ?></p>
+    <p class="object_img"><img alt="object_image" src="<?php echo $obj['image']; ?>"></p>
 <!--     <?php print_r($obj['image']); ?> output the content of the variable-->
 
-    <td><?php echo $obj['text']; ?></td>
-    <td><?php echo "Kategori: " . $obj['category']; ?></td>
-    <td><?php echo "Ägare: " . $obj['owner']; ?></td>
-
-  </tr>
-
+    <p class="small"><?php echo $obj['text']; ?></p>
+    <p class="small"><?php echo "Ägare: " . $obj['owner']; ?></p>
+  </article>
+</div>
   <?php endforeach; ?>
 
-</table>
+
