@@ -25,8 +25,9 @@ function isActivePage($page) {
 <!-- The body id helps with highlighting current menu choice -->
 <body>
 
-  <div id="whole">
+ <div id="whole">
 
+<div id="header">
   <!-- Above header -->
   <header id="above">
   <p id="logotitle"><a href=".">BEGRAVNINGSMUSEUM ONLINE</a></p>
@@ -46,3 +47,4 @@ function isActivePage($page) {
       <?php echo userLoginMenu(); ?>
     </nav>
   </header>
+</div>  <!-- end of header div -->

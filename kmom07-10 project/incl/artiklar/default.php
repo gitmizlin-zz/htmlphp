@@ -3,7 +3,7 @@
 
 <?php if (!isset($_POST['all-articles'])): ?>
 <form method="post">
-    <input type="submit" class="button" name="all-articles" value="Visa alla artiklar" />
+    <input type="image" src="img/all-a.jpg" class="button" name="all-articles" value="Visa alla artiklar" />
 </form>
 <?php endif; ?>
 

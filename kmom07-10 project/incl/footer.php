@@ -5,8 +5,7 @@
 				<div class="fotter_column">
 			        <p><b>Besöksadress:</b> Skogskyrkogården, Donationsgatan 2, 341 35 Ljungby</p>
 			        <p><b>Kontakt via pastorsexpeditionen:</b> Skogskyrkogården, Donationsgatan 2, 341 35 Ljungby</p>
-			        <p><a href="https://goo.gl/maps/YUjRE" target="_blank">Se karta</a></p>
-
+			        <p><a href="https://goo.gl/maps/YUjRE" target="_blank">>>Se karta</a></p>
 			        <?php if (isset($pageId) && $pageId!="om") {
 			        	echo '<p><a href="om.php">>>Läs mer om oss</a></p>';
 			        } ?>

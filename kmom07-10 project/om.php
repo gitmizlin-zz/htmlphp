@@ -29,7 +29,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // print_r($res)
 ?>
 
-		<div id="presentation">
+		<div id="content">
 
 			<h1>
 				<?php
