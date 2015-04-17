@@ -44,6 +44,8 @@ else
   </aside>
   <article id="testpage_article" class="right border justify-para" style="width:79%;">
 
+    <h1>Artiklar om BMO</h1>
+
     <?php include("$path/$file"); ?>
   </article>
 </div> <!-- end of content div -->

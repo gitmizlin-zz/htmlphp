@@ -26,5 +26,4 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			    <p><?php echo $art['content']; ?></p>
 	    </article>
     </div>
-
 <?php endforeach; ?>

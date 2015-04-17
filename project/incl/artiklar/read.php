@@ -30,8 +30,6 @@ $select .= "</select>";
 
 ?>
 
-<h1>Artiklar</h1>
-
 <form method="post">
   <fieldset>
     <p>

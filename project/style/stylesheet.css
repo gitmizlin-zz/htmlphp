@@ -11,46 +11,33 @@
 html {
   overflow-y: scroll;
   background: -webkit-linear-gradient(#F7F7F7, #C6C6C6); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#F7F7F7, #C6C6C6); /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(#F7F7F7, #C6C6C6);  For Opera 11.1 to 12.0
   background: -moz-linear-gradient(#F7F7F7, #C6C6C6); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#F7F7F7, #C6C6C6); /* Standard syntax */
-
+  min-height:100%;
 }
 
 body {
   font-family: Tahoma, Geneva, sans-serif;
-  color: #gray;
-  margin: 0px;
-  height: 100%;
-
-}
-
-div#whole {
   width: 960px;
   margin:0 auto;
-  height: 100%;
-  background-color: white;
-  padding-bottom: 20px;
--webkit-box-shadow: 5px 5px 5px 0px rgba(117,105,117,0.14);
--moz-box-shadow: 5px 5px 5px 0px rgba(117,105,117,0.14);
-box-shadow: 5px 5px 5px 0px rgba(117,105,117,0.14);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(117,105,117,0.14);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(117,105,117,0.14);
 }
 
 div#content {
-  margin-bottom: 20px;
   padding: 20px;
+  background-color: white;
+  overflow:auto;
 }
 
-h1, h2 {
-  color: #gray;
+h1 {
+  font-size: 1.3em;
 }
 
-#main_img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  max-height: 100%;
+h2 {
+  font-size: 1.1em;
+  color: #999966;
 }
 
 /* header
@@ -59,21 +46,16 @@ h1, h2 {
 
 #header {
   background: -webkit-linear-gradient(#454545, #2E2E2E); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#454545, #2E2E2E); /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(#454545, #2E2E2E);  For Opera 11.1 to 12.0
   background: -moz-linear-gradient(#454545, #2E2E2E); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#454545, #2E2E2E); /* Standard syntax */
-
-}
-
-#above {
-  padding-bottom: 0px;
 }
 
 #logotitle {
   color: #999966;
   font-size: 2em;
-  font-weight: bold;
   padding: 20px;
+  margin-top: 0;
 }
 
 #logotitle a, a:hover, a:visited {
@@ -81,23 +63,20 @@ h1, h2 {
   color: #999966;
 }
 
-#top_img {
-  background-image: url("img/start_img.jpg");
-}
-
 /* navigation menu
 --------------------------------------------------------
 */
 nav.navmenu {
-    border-bottom: 2px solid #999966;
+    border-bottom: 3px solid #999966;
     text-align: right;
+    padding-right: 20px;
 }
 
 nav.navmenu a {
-    padding: 0.3em 1em 0 1em;
-    font-family: Tahoma, Geneva, sans-serif;
-    text-decoration:none;
-    display: inline-block;
+  padding: 0.3em 1em 0 1em;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-decoration:none;
+  display: inline-block;
 }
 
 nav.navmenu a.active {
@@ -125,39 +104,58 @@ ul {
 #bottom {
   text-align: right;
   padding: 20px;
-  color: #gray;
-  height: auto;
-  height: 150px;
-  margin-bottom: 30px;
+  color: gray;
   border-top: 2px solid #999966;
+  background-color: #EDEFF5;
+  height: 200px;
 }
 
-div#footer a {
+#bottom a {
   font: italic 0.8em Arial, Helvetica, sans-serif;
   text-decoration:none;
-  color: #gray;
+  color: gray;
 }
 
-div#footer a:link {
+#bottom a:link {
   color: #2B4000;
 }
 
-div#footer a:hover {
+footer#bottom a:hover {
   text-decoration:underline;
   color: #999966;
 }
 
-div#footer a:VISITED {
-  color: #162000;
+#bottom a:visited {
+  color: gray;
 }
 
-div#footer a:active {
-  color: #162000;
+.fotter_column {
+  display: inline-block;
+  text-align: left;
+  float: left;
+  width: 30%;
+  margin-right: 30px;
 }
 
+.fotter_column a {
+  text-decoration: none;
+}
+
+#logos li{
+  display: inline;
+}
+
+
+/* byline
+--------------------------------------------------------
+*/
 #byline {
   text-align: center;
 }
+
+/* aside box
+--------------------------------------------------------
+*/
 
 #aside_box {
   display: inline-block;
@@ -165,12 +163,20 @@ div#footer a:active {
   line-height: 150%;
 }
 
-#testpage_article, #stylepage_article, #objekt_article {
-  display: inline-block;
+.aside_nav a {
+  text-decoration: none;
 }
 
-.related a:hover {
-  color: #FF1493;
+.aside_nav a:hover {
+  color: gray;
+}
+
+
+/* article, object page
+--------------------------------------------------------
+*/
+#testpage_article, #stylepage_article, #objekt_article {
+  display: inline-block;
 }
 
 div.article_wrapper_1 {
@@ -181,16 +187,20 @@ div.article_wrapper_1 {
   background-color: #F6F6F3;
   margin-bottom: 20px;
   margin-right: 20px;
-/*  border: solid 1px #949470;*/
   color: #686868;
   padding: 10px;
+  border: solid 1px;
+  border-color: #999966;
 }
 
 div.article_wrapper_2 {
   background-color: #F6F6F3;
-/*  border: solid 1px #949470;*/
   color: #686868;
   padding: 20px;
+  max-height: 700px; /* sets max-height value for all standards-compliant browsers */
+  overflow-y: auto;
+  border: solid 1px;
+  border-color: #999966;
 }
 
 .object img {
@@ -213,21 +223,29 @@ div.article_wrapper_2 {
 
 .left {
   max-width:400px;
-  max-height: 400px;
+  float:left;
+  padding-right: 0;
 }
 
-.fotter_column {
-  display: inline-block;
-  text-align: left;
-  float: left;
-  width: 30%;
-  margin-right: 30px;
+.left img {
+  max-width:100%;
+  max-height:100%;
 }
 
-.fotter_column a {
-  text-decoration: none;
+aside.left {
+  max-width: 230px;
 }
 
 fieldset {
   border: none;
+}
+
+.thum_250 li {
+  display: inline-block;
+  margin-left: 18px;
+}
+
+.align_left {
+  text-align: left;
+  width: 960px;
 }

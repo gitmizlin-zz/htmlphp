@@ -33,12 +33,13 @@ function userIsAuthenticated() {
 //
 // create the login/logout menu
 //
+
 function userLoginMenu() {
   // array with all menu items
   $menu = array(
-    "Login"   => "login.php?p=login",
-    "Status"   => "login.php",
-    "Logout"   => "login.php?p=logout",
+    'login' => array('label' => 'Logga in', 'href' => 'login.php?p=login'),
+    'status' => array('label' => 'Status', 'href' => 'login.php'),
+    'logout' => array('label' => 'Logga ut', 'href' => 'login.php?p=logout'),
   );
 
   // check if user is logged in or not, alter the menu depending on the result
@@ -49,11 +50,28 @@ function userLoginMenu() {
     unset($menu['logout']);
   }
 
-  $html = "<a class='navmenu'";
-  foreach($menu as $key=>$val) {
-    $html .= "<a href='$val'>$key</a> ";
+  $html = '';
+  foreach($menu as $key => $val) {
+    // $html .= "<a href='$val[href]'>$val[label]</a>";
+    $html .= "<a class='echo isActivePage('login') ? 'active' : '';' href='$val[href]'>$val[label]</a> ";
   }
+
   return $html;
+}
+
+function localize($placeholder, $lang) {
+  $translations = array(
+    'sv' => array(
+      'login_string' => 'Logga in',
+      'status_string' => 'Status'
+    ),
+    'jp' => array(
+      'login_string' => 'ログイン',
+      'status_string' => 'ステータス'
+    )
+  );
+
+  return $translations[$placeholder][$lang];
 }
 
 // -------------------------------------------------------------------------------------------
@@ -68,6 +86,7 @@ function userLoginForm($output=null, $outputClass=null) {
 
   $disabled = null;
   $disabledInfo = null;
+
   if(userisAuthenticated()) {
     $disabled = "disabled";
     $disabledInfo = "<em class='quiet small'>Du är inloggad, du måste <a href='?p=logout'>logga ut</a> innan du kan logga in.</em>";

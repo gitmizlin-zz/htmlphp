@@ -1,9 +1,7 @@
 <!-- Sidans/Dokumentets huvudsakliga innehåll -->
-<h1>BOM Artiklar</h1>
-
 <?php if (!isset($_POST['all-articles'])): ?>
 <form method="post">
-    <input type="image" src="img/all-a.jpg" class="button" name="all-articles" value="Visa alla artiklar" />
+    <input type="image" src="img/art_all_button.png" class="button" name="all-articles" value="Visa alla artiklar" />
 </form>
 <?php endif; ?>
 

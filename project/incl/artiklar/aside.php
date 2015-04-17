@@ -1,4 +1,4 @@
-<nav class="vmenu">
+<nav class="aside_nav">
 
   <ul <?php if(isset($p)) echo "id='".strip_tags($p)."'"; ?>>
     <li><h4>Artiklar</h4>
