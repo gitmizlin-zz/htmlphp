@@ -38,7 +38,7 @@ function userLoginMenu() {
   // array with all menu items
   $menu = array(
     'login' => array('label' => 'Logga in', 'href' => 'login.php?p=login'),
-    'status' => array('label' => 'Status', 'href' => 'login.php'),
+    // 'status' => array('label' => 'Status', 'href' => 'login.php'),
     'logout' => array('label' => 'Logga ut', 'href' => 'login.php?p=logout'),
   );
 
@@ -46,14 +46,13 @@ function userLoginMenu() {
   if(userIsAuthenticated()) {
     unset($menu['login']);
   } else {
-    unset($menu['status']);
+    // unset($menu['status']);
     unset($menu['logout']);
   }
 
   $html = '';
   foreach($menu as $key => $val) {
-    // $html .= "<a href='$val[href]'>$val[label]</a>";
-    $html .= "<a class='echo isActivePage('login') ? 'active' : '';' href='$val[href]'>$val[label]</a> ";
+    $html .= "<a class='" . (isActivePage('login') ? 'active' : '') . "' href='$val[href]'>$val[label]</a> ";
   }
 
   return $html;
@@ -63,11 +62,11 @@ function localize($placeholder, $lang) {
   $translations = array(
     'sv' => array(
       'login_string' => 'Logga in',
-      'status_string' => 'Status'
+      // 'status_string' => 'Status'
     ),
     'jp' => array(
       'login_string' => 'ログイン',
-      'status_string' => 'ステータス'
+      // 'status_string' => 'ステータス'
     )
   );
 
@@ -89,14 +88,13 @@ function userLoginForm($output=null, $outputClass=null) {
 
   if(userisAuthenticated()) {
     $disabled = "disabled";
-    $disabledInfo = "<em class='quiet small'>Du är inloggad, du måste <a href='?p=logout'>logga ut</a> innan du kan logga in.</em>";
+    $disabledInfo = "<a href='?p=logout' class='login_logout'>logga ut</a>";
   }
 
   $html = <<<EOD
 <h1>Logga in</h1>
 <form method="post" action="?p=login">
   <fieldset>
-    <legend>Login</legend>
     $output
     <p>
       <label for="input1">Användarkonto:</label><br>
@@ -132,7 +130,7 @@ function userLogin() {
 
     // does account and password match?
     if($userAccount == $_POST['account'] && $userPassword == userPassword($_POST['password'])) {
-      $output = "Du är nu inloggad. Menyn uppe i högra hörnet har ändrat sig.";
+      $output = "Du är nu inloggad.";
       $outputClass = "success";
       $_SESSION['authenticated'] = true;
     } else {

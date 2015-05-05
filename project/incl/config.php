@@ -3,21 +3,21 @@
 error_reporting(-1);
 
 // start a named session
-session_name(preg_replace('/[:\.\/-_]/', '', __FILE__));
+// session_name(preg_replace('/[:\.\/-_]/', '', __FILE__));
 
-if(!isset($_SESSION)){	
+if(!isset($_SESSION)){
     session_start();
 }
 
 // time page generation, display in footer. comment out to disable timing.
 $pageTimeGeneration = microtime(true);
 
-// include common functions 
+// include common functions
 include_once(dirname(__FILE__) . "/../src/common.php");
 
 // include functions for login & logout
 include_once(dirname(__FILE__) . "/../src/login.php");
 
 // account and password that can login
-$userAccount = "doe";
-$userPassword = userPassword("doe");
+$userAccount = "doe4285";
+$userPassword = userPassword("doe4285");

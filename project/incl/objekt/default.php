@@ -1,8 +1,8 @@
 <!-- Sidans/Dokumentets huvudsakliga innehåll -->
 
 <?php if (!isset($_POST['all-objects'])): ?>
-<form id="aa" method="post">
-    <input type="image" src="img/obj_all_button2.png" class="button" name="all-objects" value="Visa alla objekt" />
+<form method="post">
+    <input type="submit" name='all-objects' class="button" value="Visa alla objekt" />
 </form>
 
 <?php endif; ?>

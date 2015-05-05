@@ -37,7 +37,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				?>
 			</h1>
 			<?php foreach($res as $about): ?>
-			<article id="om_oss">
+			<article>
 	            <h2><?php echo $about['title']; ?></h2>
 	            <?php echo $about['content']; ?>
 	        </article>

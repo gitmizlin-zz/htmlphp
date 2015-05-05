@@ -22,6 +22,7 @@ else if ($p == "logout")
 {
 	$pageTitle = "Logga ut";
 	$content = userLogout();
+	$pageId = "logout";
 }
 else
 {

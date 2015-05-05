@@ -1,8 +1,9 @@
 <!-- Sidans/Dokumentets huvudsakliga innehåll -->
 <?php if (!isset($_POST['all-articles'])): ?>
 <form method="post">
-    <input type="image" src="img/art_all_button.png" class="button" name="all-articles" value="Visa alla artiklar" />
+    <input type="submit" name="all-articles" class="button" value="Visa alla artiklar" />
 </form>
+
 <?php endif; ?>
 
 <?php

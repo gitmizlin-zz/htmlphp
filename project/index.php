@@ -50,18 +50,17 @@
 
 			<?php if (!isset($_POST['all-objects'])): ?>
 			<ul class="thum_250">
-				<li><img src="img/bmo/250/minnestavla_eug.jpg"/></li>
-				<li><img src="img/bmo/250/parlkrans_blomma.jpg"/></li>
-				<li><img src="img/bmo/250/begravningskonfekt_madonna_maria_o_jesus.jpg"/></li>
-				<li><img src="img/bmo/250/portvin_med_glas.jpg"/></li>
-				<li><img src="img/bmo/250/begravningskonfekt_svart_tro_hopp_karlek.jpg"/></li>
+				<li><img src="img/bmo/250/minnestavla_eug.jpg" alt="Minnestavla" /></li>
+				<li><img src="img/bmo/250/parlkrans_blomma.jpg" alt="Pärlkrans blomma" /></li>
+				<li><img src="img/bmo/250/begravningskonfekt_madonna_maria_o_jesus.jpg" alt="Begravningskonfekt Madonna Maria" /></li>
+				<li><img src="img/bmo/250/portvin_med_glas.jpg" alt="Portvin med glas" /></li>
+				<li><img src="img/bmo/250/begravningskonfekt_svart_tro_hopp_karlek.jpg" alt="Begravningskonfekt svart"/></li>
 			</ul>
 
-				<form method="post" class="button">
-					<input type="image" src="img/obj_all_button.png" id="button" name="all-objects" value	="Visa alla objekt" />
+				<form method="post">
+					<input type="submit" name="all-objects" class="button" value="Visa alla objekt" />
 				</form>
 			<?php endif; ?>
-
 
 		</article>
 	</div> 	<!-- end of content -->

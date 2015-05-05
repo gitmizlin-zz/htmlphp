@@ -30,16 +30,15 @@ function isActivePage($page) {
   <div id="header">
     <!-- Above header -->
     <header id="above">
-    <p id="logotitle"><a href=".">BEGRAVNINGSMUSEUM ONLINE</a></p>
-    <!-- login & logout menu -->
-    <!-- <?php echo userLoginMenu(); ?> -->
-
+      <p id="logotitle"><a href=".">BEGRAVNINGSMUSEUM ONLINE</a></p>
+      <!-- login & logout menu -->
     </header>
 
     <!-- Top header with navigation -->
     <header id="top">
       <!-- Main navigation menu -->
-    	<nav class="navmenu">
+
+      <nav class="navmenu">
         <a class="<?php echo isActivePage('hem') ? 'active' : ''; ?>" href="index.php">Hem</a>
         <a class="<?php echo isActivePage('objekt') ? 'active' : ''; ?>" href="objekt.php">Objekt</a>
         <a class="<?php echo isActivePage('artiklar') ? 'active' : ''; ?>"   href="artiklar.php">Artiklar</a>

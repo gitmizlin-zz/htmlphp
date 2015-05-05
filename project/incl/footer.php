@@ -3,7 +3,7 @@
 				<div class="fotter_column">
 			        <p><b>Besöksadress:</b><br/> Skogskyrkogården, Donationsgatan 2, 341 35 Ljungby</p>
 			        <p><b>Kontakt via pastorsexpeditionen:</b> Skogskyrkogården, Donationsgatan 2, 341 35 Ljungby</p>
-			        <p><a href="https://goo.gl/maps/YUjRE" target="_blank">>>Se karta</a></br>			        <?php if (isset($pageId) && $pageId!="om") {
+			        <p><a href="https://goo.gl/maps/YUjRE" target="_blank">>>Se karta</a><br>			        <?php if (isset($pageId) && $pageId!="om") {
 			        	echo '<a href="om.php">>>Läs mer om oss</a>';
 			        } ?></p>
 
@@ -15,11 +15,12 @@
 
 			        <ul id="logos">
 
-			        	<li><a href="https://www.facebook.com/Begravningsmuseet" target="_blank" title="BMOs facebook-sida" /><img src="img/fb_logo.jpg" alt="facebook" /></a></li>
+			        	<li><a href="https://www.facebook.com/Begravningsmuseet" target="_blank" title="BMOs facebook-sida"><img src="img/fb_logo.jpg" alt="facebook" /></a></li>
 
-			        	<li><a href="https://goo.gl/maps/YUjRE" target="_blank"title="BMO på Google karta"><img src="img/gmap_logo.jpg" alt="google_map" /></a></li>
+			        	<li><a href="https://goo.gl/maps/YUjRE" target="_blank" title="BMO på Google karta"><img src="img/gmap_logo.jpg" alt="google_map" /></a></li>
 			        	<li><a href="http://www.hitta.se/begravningsmuseet/ljungby/yhzzl2X4mn" target="_blank" title="BMO på Hitta.se"><img src="img/hitta_logo.jpg" alt="hitta.se" /></a></li>
 			        	<li><a href="http://www.svenskakyrkan.se/ljungby/begravningsmuseum" target="_blank" title="BMO på Svenska kyrkans webbsida"><img src="img/svenska_kyrkan_logo.jpg" alt="Svenska kyrkan" /></a></li>
+			        </ul>
 			    </div>
 
 				<div class="fotter_column">
@@ -33,6 +34,6 @@
 			    </div>
 			</footer>
 	</div> 	<!-- end of content -->
-</div> <!-- end of whole div -->
+
 </body>
 </html>
